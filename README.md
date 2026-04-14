@@ -6,13 +6,13 @@ This study investigates the relationship between latent personality factors (bas
 Using a large-scale psychometric dataset ($N \approx 17,000$), I implemented **Structural Equation Modeling (SEM)** to validate the measurement model and analyze the structural paths between personality facets and response times. The rawdata was from https://openpsychometrics.org/_rawdata/, and initially had about ($N \approx 23,000$) answers
 
 ### Main Visualization
-![Model Results](Openness and Amiability vs Time.png)
+![Model Results](Openness-Amiability.png)
 *Figure 1: Structural model showing the impact of personality facets on response latency.*
 
 ### Key Files
 * **data-cleaning.R**: Script for data filtering, handling outliers, and Z-score normalization.
 * **sem-analysis.R**: Implementation of the Confirmatory Factor Analysis (CFA) and SEM using the `lavaan` package.
-* **[Openness and Amiability vs Time].png**: Visual representation of the model and its standardized coefficients.
+* **[Openness-Amiability].png**: Visual representation of the model and its standardized coefficients.
 
 ### Technical Stack
 * **Language:** R
