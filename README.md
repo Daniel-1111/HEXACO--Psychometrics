@@ -1,9 +1,12 @@
-# HEXACO Psychometrics: A Cross-Cultural Network Perspective
-**Author:** Daniel A. Vasconcelos
+# Advanced Psychometric Network Analysis (PNA): A Cross-Cultural Case Study
 
 ## 📌 Project Overview
 
 This repository represents a comprehensive psychometric workflow. While traditional **Confirmatory Factor Analysis (CFA)** and **Structural Equation Modeling (SEM)** are provided as foundational benchmarks, this project primarily focuses on **Psychometric Network Analysis (PNA)** as a "step-beyond" methodology.
+
+The HEXACO dataset was selected as a robust benchmark to demonstrate high-dimensional data cleaning, Gaussian Graphical Model (GGM) estimation, and structural invariance testing across diverse populations.
+
+Note on Research Focus: While this repository utilizes the HEXACO personality framework, it serves primarily as a methodological showcase for Psychometric Network Analysis (PNA). My core interest lies in the development and application of advanced statistical models and data engineering pipelines within psychometrics, rather than personality theory itself.
 
 ### Why Network Analysis?
 Traditional latent variable models (CFA/SEM) assume that an underlying factor causes the observed behaviors. In contrast, the **Network Perspective** treats personality as a system of autonomous, interacting components. By moving from SEM to PNA, we can:
