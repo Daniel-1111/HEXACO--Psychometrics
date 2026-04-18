@@ -10,8 +10,8 @@ Using a large-scale psychometric dataset ($N \approx 17,000$), I implemented **S
 *Figure 1: Structural model showing the impact of personality facets on response latency.*
 
 ### Key Files
-* **data-cleaning.R**: Script for data filtering, handling outliers, and Z-score normalization.
-* **sem-analysis.R**: Implementation of the Confirmatory Factor Analysis (CFA) and SEM using the `lavaan` package.
+* **HEXACO Cleaning Rawdata.R**: Script for data filtering, handling outliers, and Z-score normalization.
+* **CFA and SEM.R**: Implementation of the Confirmatory Factor Analysis (CFA) and SEM using the `lavaan` package.
 * **[Openness-Amiability].png**: Visual representation of the model and its standardized coefficients.
 
 ### Technical Stack
@@ -21,4 +21,5 @@ Using a large-scale psychometric dataset ($N \approx 17,000$), I implemented **S
 ### How to run
 1. Clone the repository.
 2. Ensure the required R libraries are installed (`install.packages("lavaan")`).
-3. Run `HEXACO Cleaning Rawdata.R` before executing the SEM script to ensure the dataframe is correctly formatted.
+3. Run `HEXACO Cleaning Rawdata.R` and `Reverse and agregate hexaco.R`
+ before executing the SEM script to ensure the dataframe is correctly formatted.
