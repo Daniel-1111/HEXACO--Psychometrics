@@ -1,25 +1,46 @@
-# HEXACO Personality Traits & Response Latency Analysis
+# HEXACO Psychometrics: A Cross-Cultural Network Perspective
+**Author:** Daniel
 
-### Project Overview
-This study investigates the relationship between latent personality factors (based on the **HEXACO model**) and cognitive effort, using **response latency** (time taken to answer) as a proxy. 
+## 📌 Project Overview
 
-Using a large-scale psychometric dataset ($N \approx 17,000$), I implemented **Structural Equation Modeling (SEM)** to validate the measurement model and analyze the structural paths between personality facets and response times. The rawdata was from https://openpsychometrics.org/_rawdata/, and initially had about ($N \approx 23,000$) answers
+This repository represents a comprehensive psychometric workflow. While traditional **Confirmatory Factor Analysis (CFA)** and **Structural Equation Modeling (SEM)** are provided as foundational benchmarks, this project primarily focuses on **Psychometric Network Analysis (PNA)** as a "step-beyond" methodology.
 
-### Main Visualization
-![Model Results](Openness-Amiability.png)
-*Figure 1: Structural model showing the impact of personality facets on response latency.*
+### Why Network Analysis?
+Traditional latent variable models (CFA/SEM) assume that an underlying factor causes the observed behaviors. In contrast, the **Network Perspective** treats personality as a system of autonomous, interacting components. By moving from SEM to PNA, we can:
+1. Identify **Bridge Facets** that connect different personality domains.
+2. Evaluate **System Stability** beyond simple global fit indices.
+* Explore **Cross-Cultural Dynamics** by analyzing how specific behavioral "feedback loops" vary between nations.
 
-### Key Files
-* **HEXACO Cleaning Rawdata.R**: Script for data filtering, handling outliers, and Z-score normalization.
-* **CFA and SEM.R**: Implementation of the Confirmatory Factor Analysis (CFA) and SEM using the `lavaan` package.
-* **[Openness-Amiability].png**: Visual representation of the model and its standardized coefficients.
+Using open-source data, this study estimates, validates, and compares personality networks across distinct global contexts, contrasting the structural dynamics of samples from **Australia (Western/Anglo)** and the **Philippines (Eastern/Asian)**.
 
-### Technical Stack
-* **Language:** R
-* **Main Libraries:** `lavaan`, `psych`, `tidyverse`, `semPlot`.
+![Network Contrast: AU vs PH](Culture_Contrast_AU_vs_PH.png)
+*Above: A Gaussian Graphical Model (GGM) of personality structure comparing Western (Australia) and Eastern (Philippines) samples, estimated via EBICglasso. Nodes represent HEXACO facets; edge thickness represents partial correlation strength.*
 
-### How to run
-1. Clone the repository.
-2. Ensure the required R libraries are installed (`install.packages("lavaan")`).
-3. Run `HEXACO Cleaning Rawdata.R` and `Reverse and agregate hexaco.R`
- before executing the SEM script to ensure the dataframe is correctly formatted.
+## 🔍 Key Findings
+
+* **Network Invariance:** Network Comparison Tests (NCT) confirm that the global network architecture (the "skeleton") of personality is stable across these distinct cultural samples ($p > 0.05$ in M-statistic), supporting the robust nature of the HEXACO model.
+* **Edge Heterogeneity:** Statistically significant differences ($p < 0.05$) exist in specific edge weights, reflecting distinct cultural nuances in how traits like *Social Boldness* and *Sentimentality* manifest within different societal norms.
+* **Stability:** Hub facets maintain high centrality stability coefficients ($CS > 0.5$) across bootstrap samples, ensuring reliability.
+
+## 🛠️ Tech Stack & Methodology
+
+* **Estimation:** Gaussian Graphical Models (GGM) using the Graphic LASSO penalty via the `qgraph` and `bootnet` R packages.
+* **Regularization:** EBIC selection was applied to minimize false positive edges, ensuring a sparse and interpretable network.
+* **Invariance Testing:** Network Comparison Test (NCT) package was used to statistically compare structure, strength, and edges between countries.
+
+---
+
+## 📁 Repository Structure
+
+* `data/`: contains information on where to access the original open-source data.
+* `scripts/`:
+    * `01_Network_Stability.R`: Script for bootstrapping, stability coefficients, and centrality estimation.
+    * `02_Cross_Cultural_Comparison.R`: Script for NCT estimation and cross-cultural plotting.
+* `output/`: High-resolution PDFs and images of the networks and stability analysis.
+
+## 🚀 How to Run
+
+1.  Clone this repository.
+2.  Install required R packages: `bootnet`, `qgraph`, `NetworkComparisonTest`, `dplyr`.
+3.  Load the raw data.
+4.  Run scripts sequentially.
