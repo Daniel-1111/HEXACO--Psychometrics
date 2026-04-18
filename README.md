@@ -1,5 +1,5 @@
 # HEXACO Psychometrics: A Cross-Cultural Network Perspective
-**Author:** Daniel
+**Author:** Daniel A. Vasconcelos
 
 ## 📌 Project Overview
 
