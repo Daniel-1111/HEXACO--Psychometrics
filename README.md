@@ -47,3 +47,4 @@ Using open-source data, this study estimates, validates, and compares personalit
 2.  Install required R packages: `bootnet`, `qgraph`, `NetworkComparisonTest`, `dplyr`.
 3.  Load the raw data.
 4.  Run scripts sequentially.
+5.  A brief exemple of how data such as this can be presented to companies or labs can be found in the script `Example of Data Presentation (Shiny).R`
